@@ -1,0 +1,20 @@
+server:
+  port: 8382
+
+spring:
+  application:
+    name: service-demo
+  boot:
+    admin:
+      client:
+        url: http://localhost:8788
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
+logging:
+  level:
+    com.myhexin: debug
+    root: warn

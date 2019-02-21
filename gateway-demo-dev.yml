@@ -1,0 +1,25 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: gateway-demo
+  boot:
+    admin:
+      client:
+        url: http://localhost:8788
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+zuul:
+  routes:
+    pfs-ifind-web.path: /psf/** #路由转发
+    pfs-ifind-web.serviceId: web-demo
+
+logging:
+  level:
+    com.myhexin: debug
+    root: warn

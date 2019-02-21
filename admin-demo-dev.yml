@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: admin-demo
+server:
+  port: 8001
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+logging:
+  level:
+    com.myhexin: debug
+    root: warn
