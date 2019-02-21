@@ -6,8 +6,10 @@ server:
 
 eureka:
   instance:
+    prefer-ip-address: true
+    status-page-url-path: /actuator/info #eureka注册中心的url link
+    health-check-url-path: /actuator/health #健康检查的url
     leaseRenewalIntervalInSeconds: 10
-    health-check-url-path: /actuator/health
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
