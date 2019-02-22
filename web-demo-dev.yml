@@ -17,7 +17,19 @@ spring:
     admin:
       client:
         url: http://localhost:8001
+feign:
+  hystrix:
+    enabled: true
 
+hystrix:
+  command:
+    default:  #default全局有效，service id指定应用有效
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
 logging:
   level:
     com.myhexin: debug
