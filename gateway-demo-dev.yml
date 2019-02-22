@@ -20,8 +20,8 @@ eureka:
     
 zuul:
   routes:
-    pfs-ifind-web.path: /psf/** #路由转发
-    pfs-ifind-web.serviceId: web-demo
+    web-demo.path: /psf/** #路由转发
+    web-demo.serviceId: web-demo
 
 logging:
   level:
