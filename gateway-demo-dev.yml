@@ -20,8 +20,8 @@ eureka:
     
 zuul:
   routes:
-    path: /demo/** #路由转发
-    service-id: web-demo
+    web-demo:
+      path: /demo/** #路由转发
 
 logging:
   level:
