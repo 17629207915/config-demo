@@ -21,7 +21,7 @@ eureka:
 zuul:
   routes:
     path: /demo/** #路由转发
-    serviceId: web-demo
+    serviceId: http://localhost:8080
 
 logging:
   level:
